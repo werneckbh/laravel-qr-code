@@ -15,7 +15,7 @@
     "extra": {
         "laravel": {
             "providers": [
-                "LaravelQRCode\\Providers\\SecurityServiceProvider"
+                "LaravelQRCode\\Providers\\QRCodeServiceProvider"
             ],
             "aliases": {
                 "QRCode": "LaravelQRCode\\Facades\\QRCode"
