@@ -1,1 +1,5 @@
 theme: jekyll-theme-cayman
+repository: werneckbh/laravel-qr-code
+title: Laravel QR Code Generator
+description: A QR Code Generator for PHP wrapper for Laravel
+show_downloads: true

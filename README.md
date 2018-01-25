@@ -4,14 +4,14 @@
 
  This is a wrapper for [QR Code Generator for PHP](https://werneckbh.github.io/qr-code), a standalone library to generate QR Codes in PNG and SVG.
 
- ## Installation
+## Installation
 
  Install using **composer**:
 
  ```bash
  $ composer require werneckbh/laravel-qr-code
  ```
- ##### Laravel 5.4 (5.5+ can skip this step)
+##### Laravel 5.4 (5.5+ can skip this step)
  
  You need to add provider and alias to your `config/app.php` file:
  
@@ -31,7 +31,7 @@
        
  ] 
  ```
- ## QR Code Types
+## QR Code Types
 
  Laravel QR Code Generator supports the following QR Codes:
 
@@ -45,7 +45,7 @@
   - vCard v3
   - Wi-fi Network Settings
   
-  ## Usage
+## Usage
     
   ```php
   <?php
@@ -60,7 +60,7 @@
   
   Make sure you check the [Documentation](https://werneckbh.github.io/laravel-qr-code/) for further instructions.
    
- ## [Contributing](CONTRIBUTING.md)
+## [Contributing](CONTRIBUTING.md)
  
  To contribute to this project, please do the following:
  
@@ -71,7 +71,7 @@
   
   Contributors will be added to package descriptor. Make sure you abide to the [Contributor Covenant Code of Conduct](CODE_OF_CONDUCT.md)
   
-  ## [License](LICENSE.md)
+## [License](LICENSE.md)
   
   **(MIT)**
   
