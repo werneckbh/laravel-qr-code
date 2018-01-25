@@ -11,7 +11,7 @@
  ```bash
  $ composer require werneckbh/laravel-qr-code
  ```
- ##### Laravel 5.4 or below
+ ##### Laravel 5.4 (5.5+ can skip this step)
  
  You need to add provider and alias to your `config/app.php` file:
  
@@ -33,7 +33,7 @@
  ```
  ## QR Code Types
 
- QR Code Generator for PHP supports the following QR Codes:
+ Laravel QR Code Generator supports the following QR Codes:
 
   - Calendar Event
   - Email Message
@@ -46,9 +46,7 @@
   - Wi-fi Network Settings
   
   ## Usage
-  
-  Just call the facade and select options you want for your QR Code:
-  
+    
   ```php
   <?php
   
@@ -58,11 +56,10 @@
   });
   
   ```
+  The above route should print a PNG image for a text QR Code.
   
-  The above route should print a PNG image for a text QR Code. 
-  
-  Make sure you check the [Documentation](https://werneckbh.github.io/qr-code/) for further instructions.
-  
+  Make sure you check the [Documentation](https://werneckbh.github.io/laravel-qr-code/) for further instructions.
+   
  ## [Contributing](CONTRIBUTING.md)
  
  To contribute to this project, please do the following:
@@ -73,7 +70,6 @@
   - Send pull request
   
   Contributors will be added to package descriptor. Make sure you abide to the [Contributor Covenant Code of Conduct](CODE_OF_CONDUCT.md)
-  
   
   ## [License](LICENSE.md)
   
