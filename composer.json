@@ -1,0 +1,25 @@
+{
+    "name": "werneckbh/laravel-qr-code",
+    "description": "QR Code Generator for PHP wrapper for Laravel",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Bruno Werneck",
+            "email": "brunovaulawerneck@gmail.com"
+        }
+    ],
+    "minimum-stability": "dev",
+    "require": {
+        "werneckbh/qr-code": "^2.1"
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "LaravelQRCode\\Providers\\SecurityServiceProvider"
+            ],
+            "aliases": {
+                "QRCode": "LaravelQRCode\\Facades\\QRCode"
+            }
+        }
+    }
+}
