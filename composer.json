@@ -12,6 +12,11 @@
     "require": {
         "werneckbh/qr-code": "^2.1"
     },
+    "autoload": {
+        "psr-4": {
+            "LaravelQRCode\\": "src/",
+        }
+    },
     "extra": {
         "laravel": {
             "providers": [
