@@ -31,86 +31,20 @@ You need to add provider and alias to your `config/app.php` file:
    
 ] 
 ```
-## QR Code Types
+## <a id='code-types'></a>QR Code Types
 
 Laravel QR Code Generator supports the following QR Codes:
 
-- Calendar Event
-  ```php
-  <?php
+- [Calendar Event](calendar.md)  
+- [Email Message](email.md)  
+- [Phone](phone.md)
+- [SMS](sms.md)
+- [Text](text.md)
+- [URL](url.md)
+- [meCard](me-card.md)
+- [vCard v3](v-card.md)
+- [Wi-fi Network Settings](wi-fi.md)
 
-    $start = new \DateTime('next saturday 7pm');
-    $end = new \DateTime('next saturday 11pm');
-    
-    $summary = 'Interview with Neil DeGrasse Tyson';
-    $description = 'Meet Mr. Tyson at Per Se and interview him about the asteroid Apophis';
-    $location = 'Time Warner Center, 10 Columbus Cir, New York, NY 10023, USA';
-  
-    QRCode::calendar($start, $end, $summary, $description, $location)->svg();
-  ```
-- Email Message
-  ```php
-  <?php
-    
-    $to = 'john.doe@example.com';
-    $subject = 'QR Code Message';
-    $body = 'This email was created from a QR Code!';
-  
-    QRCode::email($to, $body, $subject)->png();
-  ```
-- Phone
-  ```php
-  <?php
-    
-    QRCode::phone('+55 31 1234-5678')
-              ->setSize(4)
-              ->setMargin(2)
-              ->png();
-  ```
-- SMS
-  ```php
-    <?php
-      
-      QRCode::sms('+55 (31) 1234-5678', 'Text to send!')
-                ->setSize(4)
-                ->setMargin(2)
-                ->png();
-  ```
-- Text
-  ```php
-  <?php
-
-    QRCode::text('QR Code Generator for Laravel!')->png();
-  ```
-- URL
-  ```php
-  <?php
-    
-    QRCode::url('werneckbh.github.io/qr-code/')
-              ->setSize(8)
-              ->setMargin(2)
-              ->png();
-  ```
-- meCard
-  ```php
-  <?php
-
-    QRCode::meCard('John Doe', '1234 Main st.', '+1 001 555-1234', 'john.doe@example.com')->svg();
-  ```
-- [vCard v3 - (Detailed Instructions)](v-card.md)
-- Wi-fi Network Settings
-  ```php
-  <?php
-
-    $authenticationType = "WPA2";
-    $ssId = "MySuperSSID";
-    $ssIdisHidden = false;
-    $password = "Y0uC4n7f1nd7h3p4ssw0rd";
-  
-    QRCode::wifi($authenticationType, $ssId, $password, $ssIdisHidden)
-              ->setOutfile('images/my-wifi.png')
-              ->png();
-  ```
 ### Common Options
 
 These options are available to any of the QR Code types above.
@@ -126,7 +60,6 @@ Option | Return value | Expected Values
 
 ## Notes
 
- - If you set an outfile, you **MUST make sure the path exists**.  
+- If you set an outfile, you **MUST make sure the path exists**.  
 Don't forget to **set filename extension** according to your output (.png or .svg).
-
- - Since SVGs are scalable, use them to make complex QR Codes such as Calendar Events, meCards and vCards
+- Since SVGs are scalable, use them to make complex QR Codes such as [Calendar Events](calendar.md), [meCards](me-card.md) and [vCards](v-card.md)
