@@ -38,17 +38,17 @@ Route::get('qr-code/examples/v-card', function ()
     $workPhone = [
         'type' => 'work',
         'number' => '001 555-1234',
-        'cellPhone' => false
+        'cellphone' => false
     ];
     $homePhone = [
         'type' => 'home',
         'number' => '001 555-4321',
-        'cellPhone' => false
+        'cellphone' => false
     ];
     $cellPhone = [
         'type' => 'work',
         'number' => '001 9999-8888',
-        'cellPhone' => true
+        'cellphone' => true
     ];
     
     $phones = [$workPhone, $homePhone, $cellPhone];
