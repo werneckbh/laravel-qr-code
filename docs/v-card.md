@@ -21,7 +21,8 @@ Route::get('qr-code/examples/v-card', function ()
         'street' => '123 my street st',
         'city' => 'My Beautiful Town',
         'state' => 'LV',
-        'country' => 'Neverland'
+        'country' => 'Neverland',
+        'zip' => '12345-678'
     ];
     $wordAddress = [
        'type' => 'work',
@@ -29,7 +30,8 @@ Route::get('qr-code/examples/v-card', function ()
        'street' => '123 my work street st',
        'city' => 'My Dreadful Town',
        'state' => 'LV',
-       'country' => 'Hell'
+       'country' => 'Hell',
+       'zip' => '12345-678'
     ];
     
     $addresses = [$homeAddress, $wordAddress];
@@ -38,17 +40,17 @@ Route::get('qr-code/examples/v-card', function ()
     $workPhone = [
         'type' => 'work',
         'number' => '001 555-1234',
-        'cellphone' => false
+        'cellPhone' => false
     ];
     $homePhone = [
         'type' => 'home',
         'number' => '001 555-4321',
-        'cellphone' => false
+        'cellPhone' => false
     ];
     $cellPhone = [
         'type' => 'work',
         'number' => '001 9999-8888',
-        'cellphone' => true
+        'cellPhone' => true
     ];
     
     $phones = [$workPhone, $homePhone, $cellPhone];

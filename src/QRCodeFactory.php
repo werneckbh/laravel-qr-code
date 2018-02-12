@@ -181,7 +181,7 @@ class QRCodeFactory
 
         $phonesArray = [];
         foreach ($phones as $phone) {
-            $phonesArray[] = new Phone(strtoupper($phone['type']), $phone['number'], $phone['cellphone']);
+            $phonesArray[] = new Phone(strtoupper($phone['type']), $phone['number'], $phone['cellPhone']);
         }
 
         return new QR_VCard($person, $phonesArray, $addressesArray);
@@ -256,7 +256,7 @@ class QRCodeFactory
      */
     protected function validateVCardPhones (array $phones) : void
     {
-        $requiredKeys = ['type', 'number', 'cellphone'];
+        $requiredKeys = ['type', 'number', 'cellPhone'];
         foreach ($phones as $phone) {
             $keys = array_keys($phone);
             foreach ($keys as $key) {
@@ -265,7 +265,7 @@ class QRCodeFactory
                     throw new InvalidVCardPhoneEntryException('Phone requires ' . $key . ' key');
                 }
 
-                if ($key === 'cellphone' && !is_bool($phone['cellphone'])) {
+                if ($key === 'cellPhone' && !is_bool($phone['cellPhone'])) {
                     throw new InvalidVCardPhoneEntryException('Cellphone key must be boolean');
                 }
             }
