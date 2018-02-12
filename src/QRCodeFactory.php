@@ -216,7 +216,7 @@ class QRCodeFactory
         foreach ($addresses as $address) {
             $keys = array_keys($address);
             foreach ($keys as $key) {
-                if (!array_key_exists($key, $requiredKeys)) {
+                if (!in_array($key, $requiredKeys)) {
                     throw new InvalidVCardAddressEntryException('Address requires ' . $key . ' key');
                 }
             }
@@ -261,7 +261,7 @@ class QRCodeFactory
             $keys = array_keys($phone);
             foreach ($keys as $key) {
 
-                if (!array_key_exists($key, $requiredKeys)) {
+                if (!in_array($key, $requiredKeys)) {
                     throw new InvalidVCardPhoneEntryException('Phone requires ' . $key . ' key');
                 }
 
